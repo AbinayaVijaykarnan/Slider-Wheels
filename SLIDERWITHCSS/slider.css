@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&display=swap');
+
+   #outer-container{
+    width:1152px;
+    height:720px;
+    margin:0 auto;
+    }
+
+#row1 h3,#row1 p{
+  padding:20px;
+}
+#row1 p{
+    width:60%;
+}
+
+#slideshow {
+	width:90%;
+    max-width:100%;
+	text-align:center; 
+    margin:0 auto;
+    background-image: url('images/bg-cover.png');
+}
+
+#slideshow input {
+	display: none;
+}
+
+#slideshow label {
+	cursor: pointer;
+}
+
+#overflow-content {
+	width:100%;
+    overflow: hidden;
+}
+/*
+#row2 .container{
+    background-color: hotpink;
+ 
+}
+.slide h4{
+    background-image: url('images/bg-cover.png');
+}*/
+#slide1:checked ~ #slides .container {
+	margin-left: 0;
+}
+
+#slide2:checked ~ #slides .container {
+	margin-left: -20%;
+}
+
+#slide3:checked ~ #slides .container {
+	margin-left: -40%;
+}
+
+#slide4:checked ~ #slides .container {
+	margin-left: -60%;
+}
+
+#slide5:checked ~ #slides .container {
+	margin-left: -80%;
+}
+
+#slides .container {
+	width:300%; /*important*/
+	height:650px;
+    padding:50px;
+    transition: margin-left 300ms ease;
+}
+
+#slides .slide {
+	width:7%;
+	float:left;
+	height:55%;
+    padding:10px;
+    color: #FFFFFF;
+    transition: transform 1500ms ease-in; 
+}
+#slides h4,p,h5{
+    color:black;
+    background-image: url('images/bg-cover.png');
+}
+.slide:hover{
+    border:2px solid black;
+    border-radius:20px;
+    margin:0 50px;
+    transform: scale(1.2); 
+}
+.slide img{
+    width:80%;
+    background-image: url('images/wheel-bg.jpg');
+    padding-top:10px;
+}
+
+
+#navigation-button {
+    position:relative;  /* To move the navigation buttons from bottom to center of container*?*/
+    top:-250px;
+}
+
+#navigation-button label{
+    padding:20px;
+	opacity:0.8;
+    font-size:2rem;
+    color:rgba(0, 0, 0);
+}
+
+#navigation-button label:hover {
+	opacity:1;
+    font-weight: bolder;
+}
+
+#slide1:checked ~ #navigation-button label:nth-child(5), 
+#slide2:checked ~ #navigation-button label:nth-child(1), 
+#slide3:checked ~ #navigation-button label:nth-child(2), 
+#slide4:checked ~ #navigation-button label:nth-child(3), 
+#slide5:checked ~ #navigation-button label:nth-child(4) {
+	float: left;
+    display: block;
+	margin: 0 0 0 -50px;/*leftside-for moving the icon outside*/
+}
+
+#slide1:checked ~ #navigation-button label:nth-child(2), /*while clicking each slide number, corresponding  nth child is pushed out*/
+#slide2:checked ~ #navigation-button label:nth-child(3), 
+#slide3:checked ~ #navigation-button label:nth-child(4), 
+#slide4:checked ~ #navigation-button label:nth-child(5), 
+#slide5:checked ~ #navigation-button label:nth-child(1) {
+	float: right; 
+    display: block;
+	margin: 0 -50px 0 0; /*rightside for moving the icon outside*/
+}
+
+
+
+
+							
